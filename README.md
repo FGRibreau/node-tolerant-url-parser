@@ -8,8 +8,9 @@ Overly tolerant url parser specialized in parsing protocol, auth (even invalid o
 ### Usage
 
 ```javascript
-> var TolerantUrl = require('tolerant');
-> console.log(TolerantUrl.parse('protocol://user:auth@domain.com:port'));
+var TolerantUrl = require('tolerant');
+
+console.log(TolerantUrl.parse('protocol://user:auth@domain.com:port'));
 
 // should print
 {
@@ -20,7 +21,6 @@ Overly tolerant url parser specialized in parsing protocol, auth (even invalid o
   'port': 'port',
   'href': 'protocol://user:auth@domain.com:port'
 }
-
 ```
 
 ## API
