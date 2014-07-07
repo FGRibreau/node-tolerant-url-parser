@@ -25,6 +25,44 @@ console.log(TolerantUrl.parse('protocol://user:auth@domain.com:port'));
 // and that's all.
 ```
 
+### How `tolerant` differs from nodejs url.parse
+
+NodeJS [url standard library](nodejs.org/docs/latest/api/url.html):
+
+```javascript
+require('url')
+.parse('redis://plop:z4fsoV:_git://53c2nd@koo3@1hFldzFG/2ojyPwcTCPZgRo=@redsmin.com:6379')
+{
+  protocol: 'redis:',
+  slashes: true,
+  auth: null,
+  host: 'plop',
+  port: null,
+  hostname: 'plop',
+  hash: null,
+  search: null,
+  query: null,
+  pathname: '/:z4fsoV:_git//53c2nd@koo3@1hFldzFG/2ojyPwcTCPZgRo=@redsmin.com:6379',
+  path: '/:z4fsoV:_git//53c2nd@koo3@1hFldzFG/2ojyPwcTCPZgRo=@redsmin.com:6379',
+  href: 'redis://plop/:z4fsoV:_git//53c2nd@koo3@1hFldzFG/2ojyPwcTCPZgRo=@redsmin.com:6379'
+}
+```
+
+`url.parse` was not able to extract the auth while the tolerant url-parser can:
+
+```javascript
+require('tolerant')
+.parse('redis://plop:z4fsoV:_git://53c2nd@koo3@1hFldzFG/2ojyPwcTCPZgRo=@redsmin.com:6379')
+{
+  protocol: 'redis:',
+  auth: 'plop:z4fsoV:_git://53c2nd@koo3@1hFldzFG/2ojyPwcTCPZgRo=',
+  hostname: 'redsmin.com',
+  host: 'redsmin.com:6379',
+  port: '6379',
+  href: 'redis://plop:z4fsoV:_git://53c2nd@koo3@1hFldzFG/2ojyPwcTCPZgRo=@redsmin.com:6379'
+}
+```
+
 Check `test/main.js` for examples of weird urls parsed by `tolerant`.
 
 
