@@ -1,0 +1,28 @@
+{
+  "name": "tolerant",
+  "version": "1.0.0",
+  "description": "Overly tolerant url parser specialized in parsing protocol, auth (even invalid ones), host and port url parts.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:FGRibreau/node-tolerant-url-parser.git"
+  },
+  "keywords": [
+    "url",
+    "parsing"
+  ],
+  "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FGRibreau/node-tolerant-url-parser/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.20.1"
+  }
+}
