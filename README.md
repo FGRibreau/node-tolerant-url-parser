@@ -21,11 +21,11 @@ console.log(TolerantUrl.parse('protocol://user:auth@domain.com:port'));
   'port': 'port',
   'href': 'protocol://user:auth@domain.com:port'
 }
+
+// and that's all.
 ```
 
-## API
-
-### tolerant.parse(url): Object
+Check `test/main.js` for examples of weird urls parsed by `tolerant`.
 
 
 ### License
