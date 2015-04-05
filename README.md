@@ -1,4 +1,4 @@
-tolerant url-parser [![Build Status](https://drone.io/github.com/FGRibreau/node-tolerant-url-parser/status.png)](https://drone.io/github.com/FGRibreau/node-tolerant-url-parser/latest) [![Gittip](http://badgr.co/gittip/fgribreau.png)](https://www.gittip.com/fgribreau/) [![Deps](https://david-dm.org/FGRibreau/node-tolerant-url-parser.png)](https://david-dm.org/FGRibreau/node-tolerant-url-parser)
+tolerant url-parser [![Build Status](https://drone.io/github.com/FGRibreau/node-tolerant-url-parser/status.png)](https://drone.io/github.com/FGRibreau/node-tolerant-url-parser/latest) [![Deps](https://david-dm.org/FGRibreau/node-tolerant-url-parser.png)](https://david-dm.org/FGRibreau/node-tolerant-url-parser)
 ========================
 
 Overly tolerant url parser specialized in parsing protocol, auth (even invalid ones), host and port url parts.
