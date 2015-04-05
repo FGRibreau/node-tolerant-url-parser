@@ -10,7 +10,7 @@ Overly tolerant url parser specialized in parsing protocol, auth (even invalid o
 ```javascript
 var TolerantUrl = require('tolerant');
 
-console.log(TolerantUrl.parse('protocol://user:auth@domain.com:port'));
+console.log(TolerantUrl.parse('protocol://user:auth@domain.com:port/path/a'));
 
 // should print
 {
@@ -19,7 +19,8 @@ console.log(TolerantUrl.parse('protocol://user:auth@domain.com:port'));
   'hostname': 'domain.com',
   'host': 'domain.com:port',
   'port': 'port',
-  'href': 'protocol://user:auth@domain.com:port'
+  'href': 'protocol://user:auth@domain.com:port/path/a',
+  'path': '/path/a'
 }
 
 // and that's all.
@@ -59,7 +60,8 @@ require('tolerant')
   hostname: 'redsmin.com',
   host: 'redsmin.com:6379',
   port: '6379',
-  href: 'redis://plop:z4fsoV:_git://53c2nd@koo3@1hFldzFG/2ojyPwcTCPZgRo=@redsmin.com:6379'
+  href: 'redis://plop:z4fsoV:_git://53c2nd@koo3@1hFldzFG/2ojyPwcTCPZgRo=@redsmin.com:6379',
+  path: null
 }
 ```
 
