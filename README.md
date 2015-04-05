@@ -67,6 +67,7 @@ require('tolerant')
 
 Check `test/main.js` for examples of weird urls parsed by `tolerant`.
 
+### [Changelog](/CHANGELOG.md)
 
 ### License
 
