@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "url": "https://github.com/FGRibreau/node-tolerant-url-parser/issues"
   },
   "devDependencies": {
+    "chai": "^2.2.0",
     "mocha": "~1.20.1"
   }
 }

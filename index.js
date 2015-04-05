@@ -7,7 +7,23 @@ var Url = module.exports = {
   PROTOCOL: '://',
   COLON: ':',
   AT: '@',
+  SLASH: '/',
   parse: function (url) {
+    // first parse auth/host/port
+    var parsed = this._parse(url);
+
+    // then handle path (quick & dirty way)
+    ['host', 'hostname', 'port'].forEach(function (part) {
+      if (strCount(parsed[part], this.SLASH) > 0) {
+        var pair = parsed[part].split(this.SLASH);
+        parsed[part] = pair.shift();
+        parsed.path = this.SLASH + pair.join(this.SLASH);
+      }
+    }, this);
+
+    return parsed;
+  },
+  _parse: function (url) {
     var parsed = {
       protocol: null, // string
       auth: null, // string
@@ -51,6 +67,7 @@ var Url = module.exports = {
     return parsed;
   }
 };
+
 
 function strCount(str, substr) {
   if (str === null || substr === null) {
