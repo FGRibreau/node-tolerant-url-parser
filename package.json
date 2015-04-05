@@ -1,6 +1,6 @@
 {
   "name": "tolerant",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Overly tolerant url parser specialized in parsing protocol, auth (even invalid ones), host and port url parts.",
   "main": "index.js",
   "directories": {
