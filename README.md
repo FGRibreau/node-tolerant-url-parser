@@ -5,6 +5,13 @@ Overly tolerant url parser specialized in parsing protocol, auth (even invalid o
 
 [![npm](https://nodei.co/npm/tolerant.png)](https://npmjs.org/package/tolerant)
 
+### Sponsored by
+
+<p align="center">
+<strong>tolerant-url-parser</strong> development was sponsored by <strong><a href="https://redsmin.com">Redsmin</a>, a fully loaded administration service for Redis</strong>.<br/><br/>
+<a href="https://redsmin.com"><img src="https://redsmin.com/logo/rect-large-color-transparent@256.png"></a>
+</p>
+
 ### Usage
 
 ```javascript
